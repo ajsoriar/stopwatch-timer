@@ -1,0 +1,33 @@
+{
+    "menuOptios": [{
+            "id": 0,
+            "label": "Users",
+            "route": "/users"
+        },
+        {
+            "id": 1,
+            "label": "Pictures",
+            "route": "/pictures"
+        },
+        {
+            "id": 2,
+            "label": "Folders",
+            "route": "/folders"
+        },
+        {
+            "id": 3,
+            "label": "Favourites",
+            "route": "/favourites"
+        },
+        {
+            "id": 4,
+            "label": "Login",
+            "route": "/login"
+        },
+        {
+            "id": 4,
+            "label": "Logout",
+            "route": "/logout"
+        }
+    ]
+}

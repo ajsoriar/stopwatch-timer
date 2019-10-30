@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+
+  <!-- FIX for Windows version: Arora 0.10.1 (Git: 1329 e5385f3) WebKit version: 532.1 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-shim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/json3/3.3.2/json3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.34.2/es6-shim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.34.2/es6-sham.min.js"></script>
+  <script src="https://wzrd.in/standalone/es7-shim@latest"></script>
+  <!-- FIX for Windows version: Arora 0.10.1 (Git: 1329 e5385f3) WebKit version: 532.1 -->
+
+  <script>
+    function bodyOnLoad() {
+      console.log("body onLoad!");
+    }
+  </script>
+
+</head>
+
+<body onload="bodyOnLoad()">
+
+  <div id="header_container"></div>
+
+  <div id="page_container" class="container">
+    <article> Loading....</article>
+    <h1>
+      <%= htmlWebpackPlugin.options.content_title %>
+    </h1>
+    <div id='a-zone'></div>
+    <div id='b-zone'></div>
+
+  </div>
+
+  <div id="root"></div>
+
+  <div id="footer_container"></div>
+  <div id="sideMenu"></div>
+  <div id="side_menu_container"></div>
+
+</body>
+
+</html>

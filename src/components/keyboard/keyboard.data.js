@@ -1,0 +1,25 @@
+window.keys = [{
+        "key": "A",
+        "label": "A",
+        "id": "A"
+    },
+    {
+        "key": "E",
+        "label": "E",
+        "id": "E"
+    },
+    {
+        "key": "I",
+        "label": "I",
+        "id": "I"
+    }, {
+        "key": "O",
+        "label": "O",
+        "id": "O"
+    },
+    {
+        "key": "U",
+        "label": "U",
+        "id": "U"
+    }
+]
