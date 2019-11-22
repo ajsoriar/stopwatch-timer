@@ -1,0 +1,18 @@
+{
+    "menuOptios": [{
+            "id": 0,
+            "label": "Clock",
+            "route": "/clock"
+        },
+        {
+            "id": 1,
+            "label": "Stopwatch",
+            "route": "/stopwatch"
+        },
+        {
+            "id": 2,
+            "label": "Timer",
+            "route": "/timer"
+        }
+    ]
+}

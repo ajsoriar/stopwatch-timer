@@ -1,17 +1,19 @@
-import Home         from './views/home/home'
+//import Home         from './views/home/home'
 import Error404 from './pages/Error404'
 import Utils from './services/utils'
 import About from './views/about/about'
-import Login from './views/logIn/login'
+//import Login from './views/logIn/login'
+import ClockView from './views/clockView'
 
 // List of supported routes. Any url other than these routes will throw a 404 error
 const routes = {
-    '/'             : Home,
+    '/'             : ClockView,
+    '/clock'      : ClockView,
     '/about'      : About,
     //'/p/:id'      : PostShow,
     //'/register'   : Register,
-    '/login'      : Login,
-    '/home'       : Home
+    //'/login'      : Login,
+    //'/home'       : Home
     //'/pictures'   : Pictures,
     //'/videos'     : videos,
     //'/galleries'  : Galleries,
@@ -25,10 +27,10 @@ const router = () => {
 
     // Lazy load view element:
 
-    const header = null || document.getElementById('header_container');
+    //const header = null || document.getElementById('header_container');
     const content = null || document.getElementById('page_container');
-    const footer = null || document.getElementById('footer_container');
-    const sideMenu = null || document.getElementById('side_menu_containes');
+    //const footer = null || document.getElementById('footer_container');
+    //const sideMenu = null || document.getElementById('side_menu_containes');
 
     // Get the parsed URl from the addressbar
     let request = Utils.parseRequestURL()

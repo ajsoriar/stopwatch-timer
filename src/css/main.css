@@ -23,3 +23,9 @@ li {
 .container {
     color: aqua;
 }
+
+.section {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+}
