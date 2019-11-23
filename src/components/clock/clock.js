@@ -1,13 +1,15 @@
-import preact from 'preact';
+//import preact from 'preact';
+//import * as preact from "preact";
+//import { h, render, Component } from 'preact';
 import { h, render, Component } from 'preact';
 import './clock.css';
 
 class Clock extends Component {
 
+    //state = { time: Date.now() };
+
     constructor() {
-
         console.log("Clock -> Component!");
-
         super();
         // set initial time:
         this.state.time = Date.now();
@@ -33,7 +35,8 @@ class Clock extends Component {
     }
 
     render(props, state) {
-        let time = state.time; //new Date(state.time); //.toLocaleTimeString();
+        //let time = state.time; //new Date(state.time); //.toLocaleTimeString();
+        let time = new Date(this.state.time).toLocaleTimeString();
         return <span class="clock">{ time }</span>;
     }
 }

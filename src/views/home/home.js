@@ -1,6 +1,7 @@
 console.log("Home.js");
 import users from './data.users.json';
-import preact from 'preact';
+//import preact from 'preact';
+import * as preact from "preact";
 import {
     render
 } from 'preact';
@@ -49,7 +50,7 @@ let Home = {
     },
     "after_render": () => {
         const reactRootNode = document.getElementById("rootHome");
-        render( < Clock / > , reactRootNode);
+        render( <Clock/> , reactRootNode);
     }
 
 }

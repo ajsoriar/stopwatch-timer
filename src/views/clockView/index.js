@@ -1,10 +1,11 @@
 console.log("Clock.js");
 //import users from './data.users.json.js';
-import preact from 'preact';
+//import preact from 'preact';
+import * as preact from "preact";
 import {
     render
 } from 'preact';
-import Clock from '../../components/clock/clock.js';
+import Clock from './../../components/clock/clock.js';
 import './clockView.css';
 
 // --------------------------------

@@ -2,7 +2,7 @@
 import Error404 from './pages/Error404'
 import Utils from './services/utils'
 import About from './views/about/about'
-//import Login from './views/logIn/login'
+import Home from './views/home/home.js'
 import ClockView from './views/clockView'
 
 // List of supported routes. Any url other than these routes will throw a 404 error
@@ -13,7 +13,7 @@ const routes = {
     //'/p/:id'      : PostShow,
     //'/register'   : Register,
     //'/login'      : Login,
-    //'/home'       : Home
+    '/home'       : Home
     //'/pictures'   : Pictures,
     //'/videos'     : videos,
     //'/galleries'  : Galleries,
