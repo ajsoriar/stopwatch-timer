@@ -11,6 +11,7 @@ body {
     line-height: 2;
     background: rgb(0, 17, 101);
     font-family: Arial, Helvetica, sans-serif;
+    background-image: url("./../images/column.gif");
 }
 
 ul,

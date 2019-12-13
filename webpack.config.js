@@ -28,6 +28,12 @@ module.exports = {
         ]
       },
       {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          'file-loader',
+        ],
+      },
+      {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, "css-loader"]
       },
@@ -43,7 +49,7 @@ module.exports = {
                 includePaths: ["absolute/path/a", "absolute/path/b"]
             }
         }]
-      }
+      },
     ]
   },
   plugins: [
