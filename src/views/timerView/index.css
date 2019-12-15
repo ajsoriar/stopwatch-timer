@@ -1,0 +1,25 @@
+.clock-view {
+    border: 1px solid red;
+}
+
+.clock-view ul{
+    border: 1px solid rgb(0, 147, 5);
+    display: block;
+    width: 100%;
+}
+
+.clock-view li{
+    border: 1px solid rgb(0, 147, 5);
+    display: inline-block;
+    width: 100%;
+    background-color: rgb(128, 128, 128);
+}
+
+.clock-view .ico {
+    display: block;
+    width: 45px;
+    height: 45px;
+    float: left;
+    border: 2px solid yellow;
+    background-color: blueviolet;
+}

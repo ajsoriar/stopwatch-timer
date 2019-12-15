@@ -2,14 +2,19 @@
 import Error404 from './pages/Error404'
 import Utils from './services/utils'
 import About from './views/about/about'
-import Home from './views/home/home.js'
+import Home from './views/home/home'
 import ClockView from './views/clockView'
+import StopWatch from './views/stopWatchView'
+import Timer from './views/timerView'
 
 // List of supported routes. Any url other than these routes will throw a 404 error
 const routes = {
     '/'             : ClockView,
     '/clock'      : ClockView,
     '/about'      : About,
+    '/stopwatch'      : StopWatch,
+    '/timer'      : Timer,
+
     //'/p/:id'      : PostShow,
     //'/register'   : Register,
     //'/login'      : Login,
