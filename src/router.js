@@ -9,10 +9,10 @@ import Timer from './views/timerView'
 
 // List of supported routes. Any url other than these routes will throw a 404 error
 const routes = {
-    '/'             : ClockView,
+    '/'           : ClockView,
     '/clock'      : ClockView,
     '/about'      : About,
-    '/stopwatch'      : StopWatch,
+    '/stopwatch'  : StopWatch,
     '/timer'      : Timer,
 
     //'/p/:id'      : PostShow,

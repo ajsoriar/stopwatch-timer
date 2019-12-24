@@ -2,7 +2,7 @@ import * as preact from "preact";
 import {
     render
 } from 'preact';
-//import Clock from '../../components/clock/clock.js';
+import Clock from '../../components/clock/clock.js';
 import './index.css';
 
 // --------------------------------
@@ -22,7 +22,7 @@ let StopWatch = {
     },
     "after_render": () => {
         const reactRootNode = document.getElementById("rootStopWatch");
-        render( <Clock/>, reactRootNode);
+        //render( <Clock/>, reactRootNode);
     }
 }
 

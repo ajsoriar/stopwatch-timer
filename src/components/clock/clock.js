@@ -1,6 +1,4 @@
-//import preact from 'preact';
-//import * as preact from "preact";
-//import { h, render, Component } from 'preact';
+import preact from 'preact';
 import { h, render, Component } from 'preact';
 import './clock.css';
 
