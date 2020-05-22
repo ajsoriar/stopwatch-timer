@@ -30,3 +30,7 @@ li {
     top: 100px;
     width: 100%;
 }
+
+.focused{
+    outline: 7px solid #8be141;
+}

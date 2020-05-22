@@ -16,6 +16,11 @@ import Bye from './js/js_file_B'; // import is ECMA6
 //import "./components/sideMenu/sideMenu";
 import "./components/topMenu/topMenu";
 
+
+
+import "spatial-navigator";
+nav.reset();
+
 // Hello();
 
 //window.sideMenu.init("sideMenu");
