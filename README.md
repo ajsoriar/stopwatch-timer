@@ -10,6 +10,8 @@ will create ./node_modules
 
 ## 2) Development
 
+`$ npm start`
+
 `$ npm run dev`
 
 will execute the script available in package.json: webpack --mode development
