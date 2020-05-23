@@ -15,9 +15,6 @@ import Hello from './js/js_file_A'; // import is ECMA6
 import Bye from './js/js_file_B'; // import is ECMA6
 //import "./components/sideMenu/sideMenu";
 import "./components/topMenu/topMenu";
-
-
-
 import "spatial-navigator";
 nav.reset();
 

@@ -14,7 +14,6 @@ const routes = {
     '/about'      : About,
     '/stopwatch'  : StopWatch,
     '/timer'      : Timer,
-
     //'/p/:id'      : PostShow,
     //'/register'   : Register,
     //'/login'      : Login,
@@ -55,3 +54,20 @@ window.addEventListener('hashchange', router);
 
 // Listen on page load:
 window.addEventListener('load', router);
+
+window.router = {
+
+    goTo: function ( str ){
+
+        console.log("ROUTER: goTo target: "+ str );
+        //ajsrConsole.log("ROUTER: goTo target: "+ str );
+
+        if (str == null) {
+            ajsrConsole.error("ERROR: Error de foco! ruta NO disponible.");
+            return
+        }
+
+        window.location = str; 
+        //window.location = "./#/home";
+    }
+}

@@ -21,6 +21,7 @@ let App = {
     init: () => {
         console.log("App init!");
         nav.reset();
+        //nav.map.draw();
     }
 }
 
@@ -51,7 +52,11 @@ document.addEventListener('keydown', function(e) {
         case 82: // r
             // clear selection
             break;
-    
+
+        case 13:
+            nav.action();
+            break;
+
         default: 
             return;
     }
