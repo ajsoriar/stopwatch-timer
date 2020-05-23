@@ -1,9 +1,9 @@
 console.log("Clock.js");
-//import preact from 'preact';
+import preact from 'preact';
 //import * as preact from "preact";
-import * as preact from "preact";
+//import * as preact from "preact";
 import { h, render, Component } from 'preact';
-import Clock from '../../components/clock/clock.js';
+import Clock from '../../components/clock/clock';
 import './clockView.css';
 
 // --------------------------------
@@ -25,40 +25,8 @@ let ClockView = {
         console.log("after_render!")
         var reactRootNode = document.getElementById("rootClockView");
         console.log("reactRootNode:"+ rootClockView );
-
-        if ( reactRootNode ){
-            /*
-            console.log("chin!")
-            render( <Clock/>, reactRootNode);
-            */
-
-            /*
-            let instance;  // holds our component instance
-            let ref = c => {
-                // c is the component instance
-                instance = c;
-            };
-            render(<Foo ref={ref} />, parent)
-
-            console.log(instance)
-            */
-
-
-            let instance;  // holds our component instance
-            let ref = c => {
-                // c is the component instance
-                instance = c;
-            };
-            
-            render(<Clock ref={ref} />, reactRootNode)
-            
-            console.log(instance)
-
-
-        } else {
-            console.log("mmm!")
-        }
-        
+        console.log("chin!")
+        render( <Clock/>, reactRootNode);
     }
 }
 

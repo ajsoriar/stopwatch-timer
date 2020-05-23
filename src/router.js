@@ -36,8 +36,7 @@ const router = () => {
     //const footer = null || document.getElementById('footer_container');
     //const sideMenu = null || document.getElementById('side_menu_containes');
 
-    // Get the parsed URl from the addressbar
-    let request = Utils.parseRequestURL()
+    let request = Utils.parseRequestURL(); // Get the parsed URl from the addressbar
 
     // Parse the URL and if it has an id part, change it with the string ":id"
     let parsedURL = (request.resource ? '/' + request.resource : '/') + (request.id ? '/:id' : '') + (request.verb ? '/' + request.verb : '')
@@ -47,6 +46,7 @@ const router = () => {
     let page = routes[parsedURL] ? routes[parsedURL] : Error404
     content.innerHTML = page.render();
     page.after_render();
+    document.getElementById("appBody").className = "appBody "+ request.resource;
 }
 
 // Listen on hash change:
