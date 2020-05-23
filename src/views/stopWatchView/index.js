@@ -15,7 +15,7 @@ let StopWatch = {
         let view = /*html*/ `
             <section class="section clock-view">
                 <h1>Stopwatch View</h1>
-                <div id="rootStopWatch"></div>
+                <div id="rootStopWatch">VIEW ROOT</div>
             </section>
         `
         return view
