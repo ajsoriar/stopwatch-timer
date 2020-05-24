@@ -1,0 +1,12 @@
+.oneDigitDisplay {
+    display: inline-block;
+    width: 256px;
+    height: 300px;
+    background-color: darkblue;
+
+    /* Font */
+    font-size: 240px;
+    line-height: 300px;
+    text-align: center;
+    color: yellow;
+}

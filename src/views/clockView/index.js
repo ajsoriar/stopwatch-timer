@@ -5,6 +5,7 @@ import preact from 'preact';
 import { h, render, Component } from 'preact';
 import Clock from '../../components/clock/clock';
 import './clockView.css';
+import TimeDisplay from '../../components/displays/timeDisplay';
 
 // --------------------------------
 //  Define Data Sources
@@ -26,7 +27,12 @@ let ClockView = {
         var reactRootNode = document.getElementById("rootClockView");
         console.log("reactRootNode:"+ rootClockView );
         console.log("chin!")
-        render( <Clock/>, reactRootNode);
+
+        var content = <div>
+            <Clock/>
+            <TimeDisplay/>
+        </div>
+        render(content, reactRootNode);
     }
 }
 
