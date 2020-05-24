@@ -19,12 +19,21 @@ class TimeDisplay extends Component {
     }
 
     render(props, state) {
-        var cssClass = "timeDisplay"+ props.num;
-        var htmlString = <div class={cssClass}>
-            <TwoDigitsDisplay num="25"/><TwoPoints/><TwoDigitsDisplay num="38"/>
-        </div>;
 
-        return htmlString;
+        var hh = props.numString.substring(0, 2),
+            mm = props.numString.substring(2, 4),
+            ss = props.numString.substring(4, 6),
+            cssClass = "timeDisplay"+ props.num;
+
+
+        console.log( hh +":"+ mm +":"+ ss );
+        return <div class={cssClass}>
+            <TwoDigitsDisplay num={hh}/>
+            <TwoPoints/>
+            <TwoDigitsDisplay num={mm}/>
+            <TwoPoints/>
+            <TwoDigitsDisplay num={ss}/>
+        </div>;
     }
 }
 

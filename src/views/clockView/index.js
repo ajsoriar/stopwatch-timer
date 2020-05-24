@@ -30,7 +30,7 @@ let ClockView = {
 
         var content = <div>
             <Clock/>
-            <TimeDisplay/>
+            <TimeDisplay numString={'654321'}/>
         </div>
         render(content, reactRootNode);
     }

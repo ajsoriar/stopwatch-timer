@@ -19,9 +19,13 @@ class TwoDigitsDisplay extends Component {
 
     render(props, state) {
         var cssClass = "twoDigitsDisplay number-"+ props.num;
+
+        var numA =  props.num[0];
+        var numB =  props.num[1];
+
         var htmlString = <div class={cssClass}>
-            <OneDigitDisplay num="1"/>
-            <OneDigitDisplay num="3"/>
+            <OneDigitDisplay num={numA}/>
+            <OneDigitDisplay num={numB}/>
         </div>;
 
         return htmlString;
