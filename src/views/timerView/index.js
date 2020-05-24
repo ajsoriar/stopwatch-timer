@@ -3,6 +3,7 @@ import preact from 'preact';
 import { h, render, Component } from 'preact';
 import Clock from '../../components/clock/clock.js';
 import './index.css';
+import Timer from '../../components/main/timer';
 
 // --------------------------------
 //  Define Data Sources
@@ -14,14 +15,13 @@ let TimerView = {
         let view = /*html*/ `
             <section class="section clock-view">
                 <h1>Timer View</h1>
-                <div id="rootTimerView"></div>
+                <div id="root"></div>
             </section>
         `
         return view
     },
     "after_render": () => {
-        const reactRootNode = document.getElementById("rootTimerView");
-        render( <Clock/>, reactRootNode);
+        render(<Timer/>, document.getElementById("root"));
     }
 }
 

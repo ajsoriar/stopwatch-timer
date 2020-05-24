@@ -7,7 +7,7 @@ import {
 } from 'preact';
 import Clock from './../../components/clock/clock.js';
 import './home.css';
-import Button from './../../components/button/button';
+//import Button from './../../components/button/button';
 
 // --------------------------------
 //  Define Data Sources
@@ -54,9 +54,10 @@ let Home = {
 
         var content = <div>
             <Clock/>
+{/*             
             <Button text="Ok" actionFunction="console.log('LOL')"/>
             <Button text="Ok" actionFunction="console.log('MOLA')"/>
-            <Button text="Ok" actionFunction="console.log('FLIPA')"/>
+            <Button text="Ok" actionFunction="console.log('FLIPA')"/> */}
         </div>
         render( content, reactRootNode);
     }
