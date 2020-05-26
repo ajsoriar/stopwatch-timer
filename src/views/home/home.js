@@ -5,7 +5,7 @@ import * as preact from "preact";
 import {
     render
 } from 'preact';
-import Clock from './../../components/clock/clock.js';
+import Clock from './../../components/main/clock/clock.js';
 import './home.css';
 //import Button from './../../components/button/button';
 
