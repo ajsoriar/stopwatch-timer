@@ -13,6 +13,7 @@ console.log("index.js");
 import "./css/main.css"
 import Hello from './js/js_file_A'; // import is ECMA6
 import Bye from './js/js_file_B'; // import is ECMA6
+//import Utils from './utils.js'; // import is ECMA6
 //import "./components/sideMenu/sideMenu";
 import "./components/topMenu/topMenu";
 import "spatial-navigator";
