@@ -22,7 +22,8 @@ let App = {
         console.log("App init!");
         nav.reset();
         //nav.map.draw();
-    }
+    },
+    intervalID: null
 }
 
 export default App;

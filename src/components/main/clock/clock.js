@@ -4,6 +4,7 @@ import { h, render, Component } from 'preact';
 import './index.css';
 import TimeDisplay from '../../displays/timeDisplay';
 import Utils from '../../../utils'
+import App from '../../../app.js';
 
 class Clock extends Component {
 
@@ -38,15 +39,16 @@ class Clock extends Component {
     };
 
     componentDidMount() {
+        clearInterval(App.intervalID);
         this.tick();
-        this.intervalID = setInterval(() => this.tick(), 1000 ); //ss
-        //this.intervalID = setInterval(() => this.tick(), 100 ); //ss.m
-        //this.intervalID = setInterval(() => this.tick(), 50 ); //ss.mm
-        //this.intervalID = setInterval(() => this.tick(), 10 ); //ss.mm
+        App.intervalID = setInterval(() => this.tick(), 1000 ); //ss
+        //App.intervalID = setInterval(() => this.tick(), 100 ); //ss.m
+        //App.intervalID = setInterval(() => this.tick(), 50 ); //ss.mm
+        //App.intervalID = setInterval(() => this.tick(), 10 ); //ss.mm
     }
 
     componentWillUnmount() {
-        clearInterval(this.intervalID);
+        //clearInterval(App.intervalID);
     }
 
     render(props, state) {

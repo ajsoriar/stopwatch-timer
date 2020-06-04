@@ -4,6 +4,7 @@ import './index.css';
 import TimeDisplayExtended from '../../displays/timeDisplayExtended';
 import Utils from '../../../utils'
 import Button from '../../button/button';
+import App from '../../../app.js';
 
 class StopWatch extends Component {
 
@@ -38,14 +39,15 @@ class StopWatch extends Component {
     };
 
     componentDidMount() {
+        clearInterval(App.intervalID);
         this.tick();
-        //this.intervalID = setInterval(() => this.tick(), 100 ); //ss.m
-        //this.intervalID = setInterval(() => this.tick(), 50 ); //ss.mm
-        this.intervalID = setInterval(() => this.tick(), 33 ); //ss.mm
+        //App.intervalID = setInterval(() => this.tick(), 100 ); //ss.m
+        //App.intervalID = setInterval(() => this.tick(), 50 ); //ss.mm
+        App.intervalID = setInterval(() => this.tick(), 33 ); //ss.mm
     }
 
     componentWillUnmount() {
-        clearInterval(this.intervalID);
+        //clearInterval(App.intervalID);
     }
 
     render(props, state) {
