@@ -25,6 +25,7 @@ class Clock extends Component {
 
     tick () {
         var d = new Date();
+        //console.log(d);
         this.setState({
             date: d.toLocaleString(),
             data: {
@@ -37,8 +38,11 @@ class Clock extends Component {
     };
 
     componentDidMount() {
-        this.intervalID = setInterval(() => this.tick(), 100 ); //ss.m
+        this.tick();
+        this.intervalID = setInterval(() => this.tick(), 1000 ); //ss
+        //this.intervalID = setInterval(() => this.tick(), 100 ); //ss.m
         //this.intervalID = setInterval(() => this.tick(), 50 ); //ss.mm
+        //this.intervalID = setInterval(() => this.tick(), 10 ); //ss.mm
     }
 
     componentWillUnmount() {
@@ -48,7 +52,7 @@ class Clock extends Component {
     render(props, state) {
 
         var timeStingFull = Utils.twoDigits(state.data.hh) +":"+ Utils.twoDigits(state.data.mm) +":"+ Utils.twoDigits(state.data.ss) +"."+ Utils.twoDigits(state.data.ms); 
-        var timeSting = Utils.twoDigits(state.data.hh) + Utils.twoDigits(state.data.mm) + Utils.twoDigits(state.data.ss) + Utils.twoDigits(state.data.ss);   
+        var timeSting = Utils.twoDigits(state.data.hh) + Utils.twoDigits(state.data.mm) + Utils.twoDigits(state.data.ss) + Utils.twoDigits(state.data.ss);   //135900 // hhmmss
 
         return <div class="clock">
             <TimeDisplay numString={timeSting}/><br/>

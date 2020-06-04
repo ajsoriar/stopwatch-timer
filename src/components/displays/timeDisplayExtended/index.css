@@ -1,0 +1,6 @@
+.timeDisplayExtended {
+    display: inline-block;
+    min-width: 100px;
+    height: 300px;
+    background-color: red;
+}

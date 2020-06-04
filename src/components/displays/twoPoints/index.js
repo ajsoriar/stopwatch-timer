@@ -5,10 +5,11 @@ import "./index.css"
 
 class TwoPoints extends Component {
     render(props, state) {
-        return <div class="twoPoints">
-            <div class="point topPoint"></div>
+        return (<div class="twoPoints">
+            {/* {!props.showOnlyOne?<div class="point topPoint"></div>:null} */}
+            {!props.showOnlyOne&&<div class="point topPoint"></div>}
             <div class="point bottomPoint"></div>
-        </div>;
+        </div>);
     }
 }
 
