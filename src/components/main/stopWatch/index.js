@@ -5,6 +5,7 @@ import TimeDisplayExtended from '../../displays/timeDisplayExtended';
 import Utils from '../../../utils'
 import Button from '../../button/button';
 import App from '../../../app.js';
+import ListOfLaps from '../../listOfLaps'
 
 class StopWatch extends Component {
 
@@ -20,7 +21,16 @@ class StopWatch extends Component {
                 "mm": 0,
                 "ss": 0,
                 "ms": 0
-            }
+            },
+            listOfLaps: [{
+                lapNum: "lol1",
+                lapTime: "lol1",
+                elapsedTimeFromPreviousLap: "lol1"
+            },{
+                lapNum: "lol2",
+                lapTime: "lol2",
+                elapsedTimeFromPreviousLap: "lol2"
+            }]
         };
     }
 
@@ -53,11 +63,13 @@ class StopWatch extends Component {
     render(props, state) {
 
         var timeStingFull = Utils.twoDigits(state.data.hh) +":"+ Utils.twoDigits(state.data.mm) +":"+ Utils.twoDigits(state.data.ss) +"."+ Utils.twoDigits(state.data.ms); 
-        //var timeSting = Utils.twoDigits(state.data.hh) + Utils.twoDigits(state.data.mm) + Utils.twoDigits(state.data.ss) + Utils.twoDigits(state.data.ss);   //135900 // hhmmss
 
         return <div class="stopWatch">
             <TimeDisplayExtended timeString={timeStingFull}/><br/>
-            The time is {timeStingFull}.
+            <ListOfLaps lapsArr={state.listOfLaps}></ListOfLaps>
+            <hr/>
+            The time is {timeStingFull}
+            <hr/>
             <Button text="Start"/>
             <Button text="Stop"/>
             <Button text="Lap"/>
