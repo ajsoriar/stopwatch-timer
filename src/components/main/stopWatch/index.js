@@ -14,6 +14,7 @@ class StopWatch extends Component {
         this.tick = this.tick.bind(this);
         this.state = {
             time: new Date().toLocaleString(),
+            startTimestamp: null,
             data: {
                 "digital": "00:00:00", //hh +":"+ mm +":"+ ss + "." + ms,
                 "rough": "000000", //hhmmssms,
@@ -22,6 +23,7 @@ class StopWatch extends Component {
                 "ss": 0,
                 "ms": 0
             },
+            status: "OFF",
             listOfLaps: [{
                 lapNum: "lol1",
                 lapTime: "lol1",
@@ -35,6 +37,9 @@ class StopWatch extends Component {
     }
 
     tick () {
+
+        //if (this.state.status === "OFF") return;
+
         var d = new Date();
         //console.log(d);
         this.setState({
@@ -46,7 +51,23 @@ class StopWatch extends Component {
                 ms: d.getMilliseconds()              
             }
         });
+
     };
+
+    start () {
+        this.setState({
+            startTimestamp: Date.now(),
+            status: "ON"
+        });
+    }
+
+    pause () {
+
+    }
+
+    stop () {
+
+    }
 
     componentDidMount() {
         clearInterval(App.intervalID);
@@ -54,10 +75,6 @@ class StopWatch extends Component {
         //App.intervalID = setInterval(() => this.tick(), 100 ); //ss.m
         //App.intervalID = setInterval(() => this.tick(), 50 ); //ss.mm
         App.intervalID = setInterval(() => this.tick(), 33 ); //ss.mm
-    }
-
-    componentWillUnmount() {
-        //clearInterval(App.intervalID);
     }
 
     render(props, state) {

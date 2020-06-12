@@ -4,3 +4,16 @@
     margin: 10px;
     color: black;
 }
+
+.displayFocus {
+
+    border: 2px solid gray;
+
+}
+
+.displayFocus .display{
+    border: 2px solid gray;
+    width: 100px;
+    height: 150px;
+    display: inline-block;
+}
