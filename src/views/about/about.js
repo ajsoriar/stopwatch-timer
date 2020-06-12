@@ -44,6 +44,23 @@ let About = {
     }, 
     after_render:  () => {
         console.log("About after render!");
+        flyingCanvas.init({
+            width: 200,
+            height: 400,
+            showWings: false,
+            bumpIntoEdgeFn: function(){
+                console.log("Choca 1!");
+            },
+            zIndex: 300,
+            awesome: 2 // This will render the picture of the column
+        });
+        flyingCanvas.show()
+        flyingCanvas.start()
+    },
+    before_leave: () => {
+        console.log("About before leave!");
+        flyingCanvas.stop()
+        flyingCanvas.hide()
     }
 
 }

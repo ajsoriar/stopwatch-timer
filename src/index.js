@@ -17,6 +17,8 @@ import Bye from './js/js_file_B'; // import is ECMA6
 //import "./components/sideMenu/sideMenu";
 import "./components/topMenu/topMenu";
 import "spatial-navigator";
+import 'flying-canvas';
+import 'flying-canvas/dist/flying-canvas.min.css';
 nav.reset();
 
 // Hello();

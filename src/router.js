@@ -43,9 +43,16 @@ const router = () => {
 
     // Get the page from our hash of supported routes.
     // If the parsed URL is not in our list of supported routes, select the 404 page instead
-    let page = routes[parsedURL] ? routes[parsedURL] : Error404
-    content.innerHTML = page.render();
-    page.after_render();
+    //debugger
+    if ( window.router.currentPage != null && window.router.currentPage.before_leave != undefined ) {
+        window.router.currentPage.before_leave();
+    } else {
+        console.log("No before_leave!");
+    }
+    window.router.currentPage = routes[parsedURL] ? routes[parsedURL] : Error404
+    content.innerHTML = window.router.currentPage.render();
+    window.router.currentPage.after_render();
+    
     document.getElementById("appBody").className = "appBody "+ request.resource;
 }
 
@@ -69,5 +76,8 @@ window.router = {
 
         window.location = str; 
         //window.location = "./#/home";
-    }
+    },
+
+    currentPage: null
+
 }
