@@ -27,6 +27,7 @@ class Timer extends Component {
                 <div class="display d3 focusable" onFocusReceivedFunction={'App.Timer.ShowKeyboard()'} onFocusLostFunction={'App.Timer.HideKeyboard()'} ></div>
             </div>
             {state.showKeyboard && <NumericKeyboard/>}
+            <NumericKeyboard/>
             <Button text="Start"/>
             <Button text="Pause"/>
             <Button text="Cancel"/>
